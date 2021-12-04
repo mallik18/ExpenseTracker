@@ -10,6 +10,7 @@ from kivy.properties import ObjectProperty
 #from kivy.uix.floatlayout import FloatLayout
 import datetime
 import ast
+import json
 
 kivy.require('1.9.0')
 
@@ -96,12 +97,22 @@ def write_to_json(date, breakfast=0, lunch=0, dinner=0, others=0):
         'others': others
     }
 
-    with open("expenses.txt", 'r+') as file:
-        list_data = ast.literal_eval(file)
-        print(list_data)
+    # with open("expenses.txt", 'r+') as file:
+    #     list_data = ast.literal_eval(file.read())
+    #     print(list_data)
+        
+    with open("expenses.json",'r+') as file:
+          # First we load existing data into a dict.
+        file_data = json.load(file)
+        # Join new_data with file_data inside emp_details
+        file_data["expenses"].append(data)
+        # Sets file's current position at offset.
+        file.seek(0)
+        # convert back to json.
+        json.dump(file_data, file, indent = 4)
 
 class ExpenseTracker(App):
     def build(self):
         return MyGrid()
-    
+
 ExpenseTracker().run()
