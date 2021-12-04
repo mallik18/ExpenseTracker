@@ -1,0 +1,57 @@
+<MyGrid>
+
+    date: date
+    break_fast: break_fast
+    lunch: lunch
+    dinner: dinner
+    others: others
+
+    orientation: "vertical"
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+        Label:
+            text: "Expense Tracker"
+            font_size: 32
+            color: 0.92, 0.45, 0, 1
+
+        GridLayout:
+            cols:2
+            
+            Label:
+                text: "Date: "
+            TextInput:
+                id: date
+                multiline: False
+            
+            Label:
+                text: "Break Fast: "
+            TextInput:
+                id: break_fast
+                multiline: False
+            
+            Label:
+                text: "Lunch: "
+            TextInput:
+                id: lunch
+                multiline: False
+            
+            Label:
+                text: "Dinner: "
+            TextInput:
+                id: dinner
+                multiline: False
+            
+            Label:
+                text: "Others: "
+            TextInput:
+                id: others
+                multiline: False
+
+        Button:
+            text:"Submit"
+            font_size: 32
+            size: 50, 25
+            on_press: root.btn()
+
