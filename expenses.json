@@ -1,5 +1,11 @@
 {
     "expenses": [
-
+        {
+            "date": "2021-12-26",
+            "breakfast": "30",
+            "lunch": "50",
+            "dinner": "100",
+            "others": ""
+        }
     ]
 }

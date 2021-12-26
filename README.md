@@ -15,3 +15,8 @@ Its a cross-platform Expense tracker App for all your daily expenses.
 4. If you don't want any file/directory to upload to github then add the name in .gitignore file
 
 5. Now!! your are ready to contribute
+
+6. To convert python application into apk for andriod mobile or ios mobile follow the instructions
+   from the below link:
+        https://buildozer.readthedocs.io/en/latest/installation.html#targeting-android
+
